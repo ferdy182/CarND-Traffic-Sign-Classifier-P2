@@ -138,7 +138,7 @@ I downloaded several images from the web to test my network, here they are:
 
 ![images downloaded](./writeup_images/web_signals.png)
 
-The first and fourth images are bad quality so they should be difficult to classify, however the network did fine with those. Other signs have strange perspectives that might also be difficult if the training set did not contain this kind of angles. Also some images with numbers inside might be difficult to classify correctly.
+The first and fourth images are bad quality because they are reescaled from a low quality jpg, so they should be difficult to classify, however the network did fine with those. Other signs have strange perspectives that might also be difficult if the training set did not contain this kind of angles. Also some images with numbers inside might be difficult to classify correctly.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -173,7 +173,7 @@ Here are the results of the prediction:
 | Roundabout mandatory | Roundabout mandatory  | Yes |
 
 
-The model was able to correctly guess 80% of the images. ( 20 of 25)
+The model was able to correctly guess 80% of the images (20 out of 25) and this less than the test set which had 0.95 so that means that the model has some overfitting.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
