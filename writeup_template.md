@@ -116,7 +116,7 @@ My final model consisted of the following layers:
 
 To train the model, I prepared an array with the data after different preprocesses, and for each set of data I trained the network with different number of epochs from 10 to 250 and batch sizes from 64 to 512. I found out that after hundred batches it does not get better and small batches worked better than bigger batches.
 I used Adam optimizer because it is a bit better than Stochastic gradient descent, as it uses momentum to optimize the learning rate.
-I also only saved the model when the validation accuracy was better than the previous saved one to avoid overfittin.
+I also only saved the model when the validation accuracy was better than the previous saved one to avoid overfitting.
 
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
