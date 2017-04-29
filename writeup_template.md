@@ -114,7 +114,10 @@ My final model consisted of the following layers:
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I prepared an array with the data after different preprocesses, and for each set of data I trained the network with different number of epochs and batch sizes.
+To train the model, I prepared an array with the data after different preprocesses, and for each set of data I trained the network with different number of epochs from 10 to 250 and batch sizes from 64 to 512. I found out that after hundred batches it does not get better and small batches worked better than bigger batches.
+I used Adam optimizer because it is a bit better than Stochastic gradient descent, as it uses momentum to optimize the learning rate.
+I also only saved the model when the validation accuracy was better than the previous saved one to avoid overfittin.
+
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -179,7 +182,7 @@ The model was able to correctly guess 80% of the images (20 out of 25) and this 
 
 The code for making predictions on my final model is located in the 13th cell of the Ipython notebook.
 
-Here is a table showing the softmax probabilities for each of the test images. As you can see, most of the time the model is really certain of the class. It seems to have troubles with numbers such 80 or 120. It is of particular interest the number 13, which is missclassified as the same class as number 12, while it is quite obvious to the eye that they are quite different in shape and colors. 
+Here is a table showing the softmax probabilities for each of the test images. As you can see, most of the time the model is really certain of the class. It seems to have troubles with numbers such 80 or 120. It is of particular interest the number 13, which is missclassified as the same class as number 12, while it is quite obvious to the eye that they are quite different in shape and colors.
 
 ![softmax](./writeup_images/softmax.png)
 
